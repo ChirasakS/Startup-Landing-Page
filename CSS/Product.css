@@ -145,3 +145,65 @@ h2 {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
+
+/* Product layout improvements */
+.product-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px 24px;
+}
+
+.category {
+  padding: 32px;
+}
+
+.game-card {
+  padding: 18px 16px 20px;
+  border: 1px solid rgba(15,15,15,0.03);
+}
+
+.game-card .price {
+  font-size: 1.05rem;
+  color: #ff416c;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.buy-btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 6px 14px rgba(255,65,108,0.08);
+}
+
+.buy-btn:active {
+  transform: translateY(0);
+}
+
+.game-card h4 {
+  font-size: 1.05rem;
+  color: #222;
+}
+
+/* Footer */
+footer {
+  background: #0f1720;
+  color: #d1d5db;
+  margin-top: 40px;
+  padding: 18px 0;
+}
+
+footer a.btn {
+  border-radius: 6px;
+}
+
+/* Responsive tweaks */
+@media (min-width: 992px) {
+  .game-card img { height: 180px; }
+}
+
+@media (max-width: 575px) {
+  .product-container { padding: 20px 12px; }
+  .category { margin: 24px 0; }
+  .game-card img { height: 140px; }
+}
