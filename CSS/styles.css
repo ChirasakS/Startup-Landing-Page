@@ -35,3 +35,71 @@ body {
   color: #ffe36e !important;
   transform: scale(1.05);
 }
+
+/* Product layout improvements */
+.product-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px 24px;
+  flex: 1 0 auto;
+}
+
+.category {
+  padding: 32px;
+}
+
+.game-card {
+  padding: 18px 16px 20px;
+  border: 1px solid rgba(15,15,15,0.03);
+}
+
+.game-card .price {
+  font-size: 1.05rem;
+  color: #ff416c;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.buy-btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 6px 14px rgba(255,65,108,0.08);
+}
+
+.buy-btn:active {
+  transform: translateY(0);
+}
+
+.game-card h4 {
+  font-size: 1.05rem;
+  color: #222;
+}
+
+/* Footer: match navbar gradient and span full viewport width */
+footer {
+  background: linear-gradient(90deg, #ff4b2b 0%, #ff416c 100%);
+  color: #ffffff;
+  margin-top: 40px;
+  padding: 18px 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  box-shadow: 0 -3px 12px rgba(0,0,0,0.12);
+}
+
+footer a.btn {
+  border-radius: 6px;
+}
+
+/* Responsive tweaks */
+@media (min-width: 992px) {
+  .game-card img { height: 180px; }
+}
+
+@media (max-width: 575px) {
+  .product-container { padding: 20px 12px; }
+  .category { margin: 24px 0; }
+  .game-card img { height: 140px; }
+}

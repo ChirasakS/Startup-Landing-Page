@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f8f9fb;
   color: #333;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Navbar */
@@ -151,6 +158,7 @@ h2 {
   max-width: 1200px;
   margin: 40px auto;
   padding: 40px 24px;
+  flex: 1 0 auto;
 }
 
 .category {
@@ -185,12 +193,17 @@ h2 {
   color: #222;
 }
 
-/* Footer */
+/* Footer: match navbar gradient and span full viewport width */
 footer {
-  background: #0f1720;
-  color: #d1d5db;
+  background: linear-gradient(90deg, #ff4b2b 0%, #ff416c 100%);
+  color: #ffffff;
   margin-top: 40px;
   padding: 18px 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  box-shadow: 0 -3px 12px rgba(0,0,0,0.12);
 }
 
 footer a.btn {
