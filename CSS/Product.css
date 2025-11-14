@@ -17,9 +17,6 @@ body {
 }
 
 .navbar-brand.brand-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   color: white;
   font-weight: 700;
   letter-spacing: 1px;
