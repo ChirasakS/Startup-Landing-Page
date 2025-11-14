@@ -102,7 +102,7 @@ h2 {
 }
 
 .team-member img:hover {
-    border-color: #ff0000; /* เปลี่ยนสีขอบเมื่อโฮเวอร์ */
+    border-color: #ff416c; /* เปลี่ยนสีขอบเมื่อโฮเวอร์ */
 }
 
 /* ตกแต่งชื่อ */
@@ -122,18 +122,21 @@ h2 {
 
 /* ตกแต่งปุ่ม */
 .team-member .btn {
-    background-color: #f72948;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-family: 'Kanit', sans-serif;
-    transition: background-color 0.3s, transform 0.3s;
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: auto; /* ดันปุ่มให้อยู่ล่างสุด */
 }
 
 .team-member .btn:hover {
-    background-color: #ff7373;
-    transform: scale(1.1); /* ขยายเล็กน้อยเมื่อโฮเวอร์ */
+    background: linear-gradient(90deg, #ff6a2b, #ff598c);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
 .custom-brand {
@@ -157,6 +160,8 @@ h2 {
   padding: 40px 24px;
   flex: 1 0 auto;
 }
+
+
 
 .category {
   padding: 32px;
