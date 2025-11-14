@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 html, body {
   height: 100%;
 }
@@ -44,38 +46,67 @@ body {
 }
 
 .contact-section {
-    padding: 10px 0 60px;
+    padding: 40px 0 60px;
+    flex: 1 0 auto;
 }
 .contact-card {
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: #ffffff;
+    border: 1px solid rgba(15,15,15,0.03);
 }
 .contact-card button{
-    background-color: #f72948;
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
     color: white;
     border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-family: 'Kanit', sans-serif;
-    transition: background-color 0.3s, transform 0.3s;
+    padding: 10px 14px;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 6px 14px rgba(255,65,108,0.08);
 }
 .contact-card button:hover {
-    background-color: #ff7373;
-    transform: scale(1.07); /* ขยายเล็กน้อยเมื่อโฮเวอร์ */
+    background: linear-gradient(90deg, #ff6a2b, #ff598c);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
+.contact-card button:active {
+    transform: translateY(0);
+}
+h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 50px;
+  font-size: 1rem;
+}
+
 .team-heading h2 {
-    font-family: 'Kanit', sans-serif; /* ฟอนต์แบบไทยหรือสากล */
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #2c3e50;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #333;
     margin-bottom: 10px;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .team-heading h4 {
-    font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
-    color: #8F1537;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #777;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 /* Product layout improvements */
