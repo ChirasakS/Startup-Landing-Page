@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Gmaestars</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/Product.css">
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="imgAbout\ChatGPT_Image_Nov_7_2025_11_41_43_PM.png" width="50" height="50" alt="" class="me-2">
+            </div>
+
+            <a class="navbar-brand mx-auto text-white fw-bold fs-4 brand-center" href="#">GAMEPRO</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" aria-current="page"
+                            href="Product.html">Product</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="About.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="product-container">
+        <h2>Our Game Categories</h2>
+        <p class="subtitle">Discover our best-selling games in 5 popular genres</p>
+
+        <!--ADVENTURE -->
+        <div class="category">
+            <h3>ADVENTURE</h3>
+            <p>Embark on thrilling journeys and uncover hidden treasures.</p>
+
+            <div class="game-grid">
+                <div class="game-card">
+                    <img src="imgProduct\ADVENTURE\Detroit-Become Human.jpg" alt="Detroit-Become Human">
+                    <h4>Detroit : Become Human</h4>
+                    <p>฿990</p>
+                    <button class="buy-btn" onclick="buyGame('Detroit-Become Human')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\ADVENTURE\God of War (2018).jpg" alt="God of War (2018)">
+                    <h4>God of War (2018)</h4>
+                    <p>฿1,166</p>
+                    <button class="buy-btn" onclick="buyGame('God of War (2018)')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\ADVENTURE\Life is Strange.jpg" alt="Life is Strange">
+                    <h4>Life is Strange</h4>
+                    <p>฿800</p>
+                    <button class="buy-btn" onclick="buyGame('Life is Strange')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\ADVENTURE\The Last of Us Part I.jpg" alt="The Last of Us Part I">
+                    <h4>The Last of Us Part I</h4>
+                    <p>฿2,290</p>
+                    <button class="buy-btn" onclick="buyGame('The Last of Us Part I')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\ADVENTURE\Uncharted 4 A Thief’s End.jpg" alt="Uncharted 4 A Thief’s End">
+                    <h4>Uncharted 4 A Thief’s End</h4>
+                    <p>฿1,690</p>
+                    <button class="buy-btn" onclick="buyGame('Uncharted 4 A Thief’s End')">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!--OPEN WORLD -->
+        <div class="category">
+            <h3>OPEN WORLD</h3>
+            <p>Explore vast open landscapes and live your own adventure without limits.</p>
+            <div class="game-grid">
+                <div class="game-card">
+                    <img src="imgProduct\OPEN WORLD\Elden Ring.jpeg" alt="Elden Ring">
+                    <h4>Elden Ring</h4>
+                    <p>฿1,990</p>
+                    <button class="buy-btn" onclick="buyGame('Elden Ring')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\OPEN WORLD\Grand Theft Auto V.jpg" alt="Grand Theft Auto V">
+                    <h4>Grand Theft Auto V</h4>
+                    <p>฿1,390</p>
+                    <button class="buy-btn" onclick="buyGame('Grand Theft Auto V')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\OPEN WORLD\Red Dead Redemption 2.jpeg" alt="Red Dead Redemption 2">
+                    <h4>Red Dead Redemption 2</h4>
+                    <p>฿1,899</p>
+                    <button class="buy-btn" onclick="buyGame('Red Dead Redemption 2')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\OPEN WORLD\The Elder Scrolls V - Skyrim (Special-Anniversary).jpg"
+                        alt="The Elder Scrolls V - Skyrim (Special-Anniversary)">
+                    <h4>The Elder Scrolls V : Skyrim (Special-Anniversary)</h4>
+                    <p>฿1,099</p>
+                    <button class="buy-btn" onclick="buyGame('The Elder Scrolls V - Skyrim (Special-Anniversary)')">Buy
+                        Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\OPEN WORLD\The Witcher 3 - Wild Hunt (Complete Edition).jpg"
+                        alt="The Witcher 3 - Wild Hunt (Complete Edition)n">
+                    <h4>The Witcher 3 : Wild Hunt (Complete Edition)</h4>
+                    <p>฿1,200</p>
+                    <button class="buy-btn" onclick="buyGame('The Witcher 3 - Wild Hunt (Complete Edition)')">Buy
+                        Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!--HORROR -->
+        <div class="category">
+            <h3>HORROR</h3>
+            <p>Dive into terrifying worlds filled with nightmares, fear, and survival horror.</p>
+            <div class="game-grid">
+                <div class="game-card">
+                    <img src="imgProduct\HORROR\Alien - Isolation.jpg" alt="Alien - Isolation">
+                    <h4>Alien : Isolation</h4>
+                    <p>฿999</p>
+                    <button class="buy-btn" onclick="buyGame('Alien - Isolation')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\HORROR\Amnesia - The Dark Descent — PC.jpeg" alt="Amnesia - The Dark Descent">
+                    <h4>Amnesia : The Dark Descent</h4>
+                    <p>฿199</p>
+                    <button class="buy-btn" onclick="buyGame('Amnesia - The Dark Descent')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\HORROR\Outlast — PC.jpg" alt="Outlast">
+                    <h4>Outlast</h4>
+                    <p>฿299</p>
+                    <button class="buy-btn" onclick="buyGame('Outlast')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\HORROR\Resident Evil 2 (Remake).jpg" alt="Resident Evil 2 (Remake)">
+                    <h4>Resident Evil 2 (Remake)</h4>
+                    <p>฿1,099</p>
+                    <button class="buy-btn" onclick="buyGame('Resident Evil 2 (Remake)')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\HORROR\Resident Evil 7 - Biohazard.jpg" alt="Resident Evil 7 - Biohazard">
+                    <h4>Resident Evil 7 - Biohazard</h4>
+                    <p>฿1,099</p>
+                    <button class="buy-btn" onclick="buyGame('Resident Evil 7 - Biohazard')">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!--SURVIVAL -->
+        <div class="category">
+            <h3>SURVIVAL</h3>
+            <p>Gather, craft, and fight to survive in harsh, unforgiving environments.</p>
+            <div class="game-grid">
+                <div class="game-card">
+                    <img src="imgProduct\SURVIVAL\ARK - Survival Evolved.jpg" alt="ARK : Survival Evolved">
+                    <h4>ARK : Survival Evolved</h4>
+                    <p>฿1,199</p>
+                    <button class="buy-btn" onclick="buyGame('ARK : Survival Evolved')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\SURVIVAL\DayZ.jpg" alt="DayZ">
+                    <h4>DayZ</h4>
+                    <p>฿599</p>
+                    <button class="buy-btn" onclick="buyGame('DayZ')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\SURVIVAL\Minecraft (Java - Bedrock).jpg" alt="Minecraft (Java - Bedrock)">
+                    <h4>Minecraft (Java : Bedrock)</h4>
+                    <p>฿899</p>
+                    <button class="buy-btn" onclick="buyGame('Minecraft (Java - Bedrock)')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\SURVIVAL\Subnautica.jpg" alt="Subnautica">
+                    <h4>Subnautica</h4>
+                    <p>฿549</p>
+                    <button class="buy-btn" onclick="buyGame('Subnautica')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\SURVIVAL\The Forest.jpg" alt="The Forest">
+                    <h4>The Forest</h4>
+                    <p>฿459</p>
+                    <button class="buy-btn" onclick="buyGame('The Forest')">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!--STRATEGY -->
+        <div class="category">
+            <h3>STRATEGY</h3>
+            <p>Think, plan, and conquer - every move determines your victory.</p>
+            <div class="game-grid">
+                <div class="game-card">
+                    <img src="imgProduct\STRATEGY\Age of Empires IV.jpeg" alt="Age of Empires IV">
+                    <h4>Age of Empires IV</h4>
+                    <p>฿1,990</p>
+                    <button class="buy-btn" onclick="buyGame('Age of Empires IV')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\STRATEGY\Civilization VI.jpg" alt="Civilization VI">
+                    <h4>Civilization VI</h4>
+                    <p>฿1,600</p>
+                    <button class="buy-btn" onclick="buyGame('Civilization VI')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\STRATEGY\Manor Lords.jpg" alt="Manor Lords">
+                    <h4>Manor Lords</h4>
+                    <p>฿499</p>
+                    <button class="buy-btn" onclick="buyGame('Manor Lords')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\STRATEGY\Total War - Shogun 2.jpeg" alt="Total War - Shogun 2">
+                    <h4>Total War : Shogun 2</h4>
+                    <p>฿899</p>
+                    <button class="buy-btn" onclick="buyGame('Total War - Shogun 2')">Buy Now</button>
+                </div>
+
+                <div class="game-card">
+                    <img src="imgProduct\STRATEGY\XCOM 2.jpg" alt="XCOM 2">
+                    <h4>XCOM 2</h4>
+                    <p>฿1,499</p>
+                    <button class="buy-btn" onclick="buyGame('XCOM 2')">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>

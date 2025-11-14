@@ -1,0 +1,75 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fb;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.navbar-brand.brand-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navbar img {
+  border-radius: 10px;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffe36e !important;
+  transform: scale(1.05);
+}
+
+.contact-section {
+    padding: 10px 0 60px;
+}
+.contact-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.contact-card button{
+    background-color: #f72948;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-family: 'Kanit', sans-serif;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.contact-card button:hover {
+    background-color: #ff7373;
+    transform: scale(1.07); /* ขยายเล็กน้อยเมื่อโฮเวอร์ */
+}
+.team-heading h2 {
+    font-family: 'Kanit', sans-serif; /* ฟอนต์แบบไทยหรือสากล */
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.team-heading h4 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    color: #8F1537;
+    margin-bottom: 5px;
+}
