@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f8f9fb;
   color: #333;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Navbar */
@@ -36,19 +45,37 @@ body {
   transform: scale(1.05);
 }
 
+h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 50px;
+  font-size: 1rem;
+}
+
 .team-heading h2 {
-    font-family: 'Kanit', sans-serif; /* ฟอนต์แบบไทยหรือสากล */
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #2c3e50;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #333;
     margin-bottom: 10px;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .team-heading h4 {
-    font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
-    color: #8F1537;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #777;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 /* ตกแต่งส่วนสมาชิกทีม */
@@ -163,17 +190,15 @@ body {
   color: #222;
 }
 
-/* Footer: match navbar gradient and span full viewport width */
+/* Footer: match navbar gradient and stick to bottom */
 footer {
   background: linear-gradient(90deg, #ff4b2b 0%, #ff416c 100%);
   color: #ffffff;
-  margin-top: 40px;
+  margin-top: auto;
   padding: 18px 0;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
+  width: 100%;
   box-shadow: 0 -3px 12px rgba(0,0,0,0.12);
+  text-align: center;
 }
 
 footer a.btn {
