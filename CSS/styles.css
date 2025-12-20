@@ -30,7 +30,6 @@ body { font-size: var(--fs-base); }
 #featured-2 h2 { font-size: var(--fs-h2); }
 
 /* Carousel caption titles */
-.carousel-caption h4 { font-size: var(--fs-caption); }
 
 /* Navbar */
 .navbar {
@@ -143,32 +142,43 @@ footer a.btn {
   .carousel-caption h4 { font-size: 0.75rem; }
 }
 
-/* Ensure carousel captions are visible on all viewports (override Bootstrap's d-none d-md-block)
-   and keep the overlay text readable when the screen or zoom level changes. */
+/* Ensure carousel captions are visible on all viewports (override Bootstrap's d-none d-md-block) */
 .carousel-caption.d-none.d-md-block { display: block !important; }
+
+/* Make the card act as the positioning context and clip overflow
+   so the caption stays visually inside the image area. */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bordered label for the caption placed centered on the image.
+   Keeps text readable with a subtle translucent background. */
 .carousel-caption {
   position: absolute;
   left: 50%;
+  bottom: 8%;
   transform: translateX(-50%);
-  bottom: 52%;
   z-index: 5;
   color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.65);
   padding: 0.25rem 0;
 }
 .carousel-caption h4 {
-  font-size: var(--fs-caption);
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.95);
+  background: rgba(0,0,0,0.32);
+  text-shadow: none;
 }
 
-/* On small screens make captions smaller and nudge position so they remain visible */
+/* Adjust position on small screens so label doesn't overlap important image content */
 @media (max-width: 767px) {
-  .carousel-caption { bottom: 46%; }
+  .carousel-caption { bottom: 6%; }
   .carousel-caption h4 { font-size: clamp(0.7rem, 3.5vw, 1rem); }
 }
 
 @media (max-width: 480px) {
-  .carousel-caption { bottom: 42%; }
+  .carousel-caption { bottom: 5%; }
   .carousel-caption h4 { font-size: 0.75rem; }
 }
