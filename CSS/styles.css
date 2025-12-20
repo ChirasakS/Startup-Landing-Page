@@ -1,3 +1,7 @@
+:root {
+  --navbar-height: 70px;
+}
+
 html, body {
   height: 100%;
 }
@@ -37,6 +41,12 @@ body { font-size: var(--fs-base); }
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  z-index: 1000;
 }
 
 .navbar-brand.brand-center {

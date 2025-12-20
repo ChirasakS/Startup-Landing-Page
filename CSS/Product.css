@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+:root {
+  --navbar-height: 70px;
+}
+
 html, body {
   height: 100%;
 }
@@ -17,11 +21,16 @@ body {
 
 /* Navbar */
 .navbar {
-  position: fixed;
   background: linear-gradient(90deg, #ff4b2b, #ff416c);
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  z-index: 1000;
 }
 
 .navbar-brand.brand-center {
@@ -158,7 +167,7 @@ h2 {
 .product-container {
   max-width: 1200px;
   margin: 40px auto;
-  padding: 40px 24px;
+  padding: calc(var(--navbar-height) + 40px) 24px 40px;
   flex: 1 0 auto;
 }
 

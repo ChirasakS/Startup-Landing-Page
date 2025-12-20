@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+:root {
+  --navbar-height: 70px;
+}
+
 html, body {
   height: 100%;
 }
@@ -21,6 +25,12 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  z-index: 1000;
 }
 
 .navbar-brand.brand-center {
