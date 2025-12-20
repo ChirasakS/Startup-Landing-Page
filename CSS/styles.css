@@ -13,6 +13,25 @@ body {
   min-height: 100vh;
 }
 
+/* Responsive typography: scale headings smoothly across viewports and zoom levels */
+:root {
+  --fs-base: clamp(0.9rem, 1.2vw, 1rem);
+  --fs-h1: clamp(1.6rem, 5.5vw, 3.6rem);
+  --fs-h2: clamp(1.2rem, 3.2vw, 2.4rem);
+  --fs-caption: clamp(0.85rem, 1.6vw, 1.05rem);
+}
+
+body { font-size: var(--fs-base); }
+
+/* Bootstrap display utility override for more predictable scaling */
+.display-5 { font-size: var(--fs-h1); }
+
+/* Target the featured section heading to reduce size on larger zoom/width */
+#featured-2 h2 { font-size: var(--fs-h2); }
+
+/* Carousel caption titles */
+.carousel-caption h4 { font-size: var(--fs-caption); }
+
 /* Navbar */
 .navbar {
   background: linear-gradient(90deg, #ff4b2b, #ff416c);
