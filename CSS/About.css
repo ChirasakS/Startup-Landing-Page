@@ -21,6 +21,9 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar-brand.brand-center {
