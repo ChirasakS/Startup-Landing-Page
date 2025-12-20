@@ -37,12 +37,12 @@ body {
 .nav-link {
   color: white !important;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: color 0.25s ease;
+  transform: none;
 }
 
 .nav-link:hover {
   color: #ffe36e !important;
-  transform: scale(1.05);
 }
 
 .contact-section {
