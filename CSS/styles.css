@@ -129,3 +129,46 @@ footer a.btn {
   .category { margin: 24px 0; }
   .game-card img { height: 140px; }
 }
+
+/* Make carousel/image overlay text smaller on larger viewports (when expanding/zooming) */
+@media (min-width: 1200px) {
+  .carousel-caption h4 { font-size: 0.95rem; }
+}
+
+@media (min-width: 1600px) {
+  .carousel-caption h4 { font-size: 0.85rem; }
+}
+
+@media (min-width: 2000px) {
+  .carousel-caption h4 { font-size: 0.75rem; }
+}
+
+/* Ensure carousel captions are visible on all viewports (override Bootstrap's d-none d-md-block)
+   and keep the overlay text readable when the screen or zoom level changes. */
+.carousel-caption.d-none.d-md-block { display: block !important; }
+.carousel-caption {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 52%;
+  z-index: 5;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.65);
+  padding: 0.25rem 0;
+}
+.carousel-caption h4 {
+  font-size: var(--fs-caption);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* On small screens make captions smaller and nudge position so they remain visible */
+@media (max-width: 767px) {
+  .carousel-caption { bottom: 46%; }
+  .carousel-caption h4 { font-size: clamp(0.7rem, 3.5vw, 1rem); }
+}
+
+@media (max-width: 480px) {
+  .carousel-caption { bottom: 42%; }
+  .carousel-caption h4 { font-size: 0.75rem; }
+}
