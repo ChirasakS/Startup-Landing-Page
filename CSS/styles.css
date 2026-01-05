@@ -37,8 +37,6 @@ body { font-size: var(--fs-base); }
 .navbar {
   background: linear-gradient(90deg, #ff4b2b, #ff416c);
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
 }
 
 .navbar-brand.brand-center {
@@ -217,7 +215,7 @@ footer a.btn {
 }
 
 .hero-section {
-  background: linear-gradient(180deg, #f6efff 0%, #f2e9ff 100%);
+  background: linear-gradient(90deg, #ffaea0 0%, #ffb3c5 100%);
   padding: 4rem 0;
 }
 
@@ -238,7 +236,14 @@ footer a.btn {
   margin-right: 0;
 }
 
+/* Ensure hero image aligns vertically with the text and can be nudged on large viewports */
+.hero-image-card {
+  align-self: center;
+  transform: translateY(0);
+  transition: transform 0.35s ease;
+}
+
 @media (min-width: 992px) {
   /* Pull the image slightly right so it's closer to the page edge */
-  .hero-image-card { margin-right: -64px; }
+  .hero-image-card { margin-right: -64px; transform: translateY(-4%); }
 }
