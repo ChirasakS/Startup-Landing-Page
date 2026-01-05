@@ -13,12 +13,17 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: 60px; /* เพิ่มระยะห่างด้านบนเพื่อไม่ให้เนื้อหาถูกซ่อนใต้ Navbar */
 }
 
 /* Navbar */
-.navbar {
-  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+.navbar { 
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999; /* เลขสูงๆ เพื่อให้ทับทุกอย่างรวมถึง Carousel */
+  background: linear-gradient(90deg, #ff4b2b, #ff416c) !important;
 }
 
 .navbar-brand.brand-center {
@@ -41,6 +46,10 @@ body {
 
 .nav-link:hover {
   color: #ffe36e !important;
+}
+
+.main-content {
+    margin-top: 0; 
 }
 
 .contact-section {
@@ -162,6 +171,11 @@ footer a.btn {
   border-radius: 6px;
 }
 
+@media (max-width: 991px) {
+    body {
+        padding-top: 60px;
+    }
+}
 /* Responsive tweaks */
 @media (min-width: 992px) {
   .game-card img { height: 180px; }

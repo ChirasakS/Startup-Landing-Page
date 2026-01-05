@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: 60px; /* เพิ่มระยะห่างด้านบนเพื่อไม่ให้เนื้อหาถูกซ่อนใต้ Navbar */
 }
 
 /* Responsive typography: scale headings smoothly across viewports and zoom levels */
@@ -34,9 +35,13 @@ body { font-size: var(--fs-base); }
 /* Carousel caption titles */
 
 /* Navbar */
-.navbar {
-  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+.navbar { 
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999; /* เลขสูงๆ เพื่อให้ทับทุกอย่างรวมถึง Carousel */
+  background: linear-gradient(90deg, #ff4b2b, #ff416c) !important;
 }
 
 .navbar-brand.brand-center {
@@ -59,6 +64,10 @@ body { font-size: var(--fs-base); }
 
 .nav-link:hover {
   color: #ffe36e !important;
+}
+
+.main-content {
+    margin-top: 0; 
 }
 
 /* Product layout improvements */
@@ -116,6 +125,12 @@ footer {
 
 footer a.btn {
   border-radius: 6px;
+}
+
+@media (max-width: 991px) {
+    body {
+        padding-top: 60px;
+    }
 }
 
 /* Responsive tweaks */
@@ -185,57 +200,81 @@ footer a.btn {
 
 /* Feature cards (matches screenshot style) */
 .feature-card {
-  background: linear-gradient(180deg, #ffffff 0%, #fbfbff 100%);
-  border-radius: 18px;
-  border: 1px solid rgba(129,85,216,0.08);
-  box-shadow: 0 14px 36px rgba(95,65,160,0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  position: relative;
-  padding-top: 56px;
-  overflow: visible;
+    background: #ffffff;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    padding-top: 60px !important; /* เว้นที่ให้ไอคอนที่ลอยอยู่ */
+    position: relative;
 }
+
 .feature-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 24px 56px rgba(95,65,160,0.14);
+    transform: translateY(-10px);
 }
+
 .icon-wrapper {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(180deg, #f6efff 0%, #f2e9ff 100%);
-  position: absolute;
-  top: -48px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
+    width: 100px;
+    height: 100px;
+    background-color: #f0ebff; /* สีม่วงอ่อนตามรูป */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -50px; /* ให้ลอยขึ้นไปครึ่งหนึ่ง */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
 }
+
 .icon-wrapper::before {
-  content: "";
-  position: absolute;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, rgba(197,170,255,0.18), rgba(242,234,255,0.06) 50%, transparent 60%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, rgba(230, 220, 255, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    z-index: -1;
 }
-.icon-wrapper svg { width: 44px; height: 44px; fill: #0d6efd; opacity: 0.95; }
-.icon-wrapper .bi { font-size: 44px; color: #0d6efd; }
-.icon-wrapper img { width: 64px; height: 64px; object-fit: contain; border-radius: 12px; }
-.feature-card .card-title { font-size: 1.15rem; margin-top: 12px; color: #1f1f1f; }
-.feature-card .card-text { margin-top: 8px; color: #6c6c6c; font-size: 0.95rem; }
+
+.icon-wrapper svg { 
+  width: 56px; 
+  height: 56px; 
+  fill: #0d6efd; 
+  opacity: 0.98; 
+}
+
+.icon-wrapper .bi {
+    font-size: 40px;
+    color: #0d6efd; /* สีน้ำเงินของไอคอน */
+}
+
+.icon-wrapper img { 
+  width: 80px; 
+  height: 80px; 
+  object-fit: contain; 
+  border-radius: 12px; 
+}
+
+.feature-card .card-title {
+    font-size: 1.25rem;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.feature-card .card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
 
 @media (max-width: 767px) {
-  .icon-wrapper { width: 72px; height: 72px; top: -36px; }
-  .icon-wrapper svg { width: 34px; height: 34px; }
-  .icon-wrapper img { width: 46px; height: 46px; }
-  .icon-wrapper .bi { font-size: 34px; }
-  .feature-card { padding-top: 48px; }
+  .icon-wrapper { width: 90px; height: 90px; top: -48px; }
+  .icon-wrapper svg { width: 42px; height: 42px; }
+  .icon-wrapper img { width: 58px; height: 58px; }
+  .icon-wrapper .bi { font-size: 42px; }
+  .feature-card { padding-top: 72px; }
+  .icon-wrapper::before { width: 120px; height: 120px; top: 80%; }
 }
 
 .hero-section {
@@ -272,5 +311,6 @@ footer a.btn {
   .hero-image-card { margin-right: -64px; transform: translateY(-4%); }
 }
 
-/* Give extra space below the section heading so absolute icons don't overlap it */
-.features-heading { margin-bottom: 72px; }
+.features-heading {
+    margin-bottom: 100px; /* เพิ่มระยะห่างด้านล่างให้หัวข้อ */
+}
