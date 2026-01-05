@@ -224,7 +224,8 @@ footer a.btn {
   transform: translate(-50%, -50%);
   z-index: -1;
 }
-.icon-wrapper svg { width: 44px; height: 44px; fill: #bfa4f2; opacity: 0.95; }
+.icon-wrapper svg { width: 44px; height: 44px; fill: #0d6efd; opacity: 0.95; }
+.icon-wrapper .bi { font-size: 44px; color: #0d6efd; }
 .icon-wrapper img { width: 64px; height: 64px; object-fit: contain; border-radius: 12px; }
 .feature-card .card-title { font-size: 1.15rem; margin-top: 12px; color: #1f1f1f; }
 .feature-card .card-text { margin-top: 8px; color: #6c6c6c; font-size: 0.95rem; }
@@ -233,6 +234,7 @@ footer a.btn {
   .icon-wrapper { width: 72px; height: 72px; top: -36px; }
   .icon-wrapper svg { width: 34px; height: 34px; }
   .icon-wrapper img { width: 46px; height: 46px; }
+  .icon-wrapper .bi { font-size: 34px; }
   .feature-card { padding-top: 48px; }
 }
 
